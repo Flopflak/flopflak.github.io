@@ -41,7 +41,7 @@ async function commandPrompt() {
 
 async function writeTexts() {
   await commandPrompt();
-  await animateText("ls", 200, true, true)
+  await animateText("ls", 100, true, true)
   await animateText("aboutme.txt", 0, true)
   await commandPrompt();
   await animateText("cat aboutme.txt", 200, true, true)
@@ -50,14 +50,15 @@ async function writeTexts() {
   If you want to reach out to me for any reason, from asking about my projects to telling me that
   my code is trash, you can email me at flopflak1@proton.me, or add me on Discord. My
   username is flopflak. I also have a Twitter account, @flopflak, where you can message
-  me. I must point out that you'll get a response faster on Discord, since I do not
+  me. I must point out that you'll get a response fastest on Discord, since I do not
   check my email and Twitter daily.`, 0, true)
   await animateText("", 0, true)
   await animateText(`Currently, there are only two public projects on my Github: Surveyer and PrivateOffice.
   Surveyer will not receive any more updates, but PrivateOffice might. (I'm not promising, though! :D) I don't have
   anything more to say at the moment, so have a great day and thanks for visiting!`, 0, true)
+  await animateText("", 0, true)
   await commandPrompt();
-  await animateText("shutdown -h now", 200, true, true)
+  await animateText("shutdown -h now", 100, true, true)
   await animateText("Press enter to proceed!", 0)
   await ExitPage();
 }
