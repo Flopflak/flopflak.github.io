@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+    color: white;
+    font-size: 200%;
+    font-family: 'Geologica', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'VT323', monospace;    
+    user-select: none; 
+}
