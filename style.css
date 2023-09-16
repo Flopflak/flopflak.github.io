@@ -7,3 +7,7 @@ body {
     font-family: 'VT323', monospace;    
     user-select: none; 
 }
+
+#text {
+    white-space: pre-wrap;
+}
