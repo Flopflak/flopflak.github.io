@@ -33,4 +33,11 @@ async function animateText(text, delay = 0, newline = false, playaudio = false) 
         }
       }
     });
-  }
+}
+
+async function getPublicRepos(username) {
+    const response = await fetch(`https://api.github.com/users/${username}/repos`);
+    const data = await response.json();
+    const repoNames = data.map(repo => repo.name);
+    return repoNames;
+}
