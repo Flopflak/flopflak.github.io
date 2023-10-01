@@ -2,8 +2,8 @@ window.onload = function() {
   run();
 }
 
-const delay = 200;
-const allow_audio = true 
+const delay = 1;
+const allow_audio = false //just for development, I am getting sick of it
 
 var prompt = "";
 

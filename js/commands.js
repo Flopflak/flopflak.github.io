@@ -1,6 +1,6 @@
 function handleKeypress(e){
   console.log(e.key);
-  if ("-.abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ".includes(e.key)) {
+  if ("-.,abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ".includes(e.key)) {
     prompt += e.key;
   }
   if (e.key === "Backspace") {
@@ -86,11 +86,16 @@ async function handleCommand(command) {
       switch(filename) {
         case "aboutme.txt":
           await animateText(" ");
-          await animateText("This is Flopflak's professional bio...", 0, true);
+          await animateText(`Hi! I'm Flopflak. I'm still studying, and programming is just a hobby of mine. I know Python, C#, a little bit of C, and Assembly. However, I mainly write in Python. If you want to reach out to me for any reason, from asking about my projects to telling me that my code is trash, you can email me at flopflak1@proton.me, or add me on Discord. My username is flopflak. I also have a Twitter account, @flopflak, where you can message me. I must point out that you'll get a response faster on Discord, since I do not check my email and Twitter daily.`, 0, true);
+          await animateText("", 0, true);
+          await animateText(`Currently, there are only two public projects on my Github: Surveyer and PrivateOffice. Surveyer will not receive any more updates, but PrivateOffice might. (I'm not promising, though! :D) I don't have anything more to say at the moment, so have a great day and thanks for visiting! Also, if you want to get redirected to my Github Profile, just "turn off" the machine. (shutdown -h now)`, 0, true);
           break;
         case "projects.txt":
           await animateText(" ");
-          await animateText("List of professional projects...", 0, true);
+          repos = await getPublicRepos("Flopflak");
+          for (i=0; i<repos.length; i++) {
+            await animateText("-"+repos[i], 0, true);
+          }
           break;
         default:
           await animateText(" ");
