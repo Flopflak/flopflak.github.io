@@ -1,13 +1,70 @@
-body {
-    background-color: black;
-    color: white;
-    font-size: 200%;
-    font-family: 'Geologica', sans-serif;
-    font-family: 'Press Start 2P', cursive;
-    font-family: 'VT323', monospace;    
-    user-select: none; 
+:root {
+    --background: #1E2125;  /* Dark Grey for Body Background */
+    --button: #7B8A95;      /* Muted Blue-Grey for Button Background */
+    --title: #B0C4DE;      /* Light Steel Blue for Main Title (h1) */
+    --text: #DADFE2;       /* Light Grey for Text (p) */
+    --body: #2B2F36;       /* Slightly Lighter Grey for Wrapper & Option Div Background */
 }
 
-#text {
-    white-space: pre-wrap;
+.option{
+    background-color: var(--background);
+    color: var(--text);
+    width: 250px;
+    height: 300px;
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    text-align: center;
+    transition: ease-out 0.2s;
+    display: block;
+}
+
+.option:hover {
+    background-color: var(--background);
+    transform: scale(105%);
+}
+
+.option h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.option button {
+    width: 80%;
+    height: 15%;
+    border-radius: 15px;
+    border: 1px;
+    background-color: var(--button);
+    font-size: 120%;
+    vertical-align: bottom;
+}
+
+.option p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80%;
+    text-align: justify;
+}
+
+.option small {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#wrapper {
+    padding: auto;
+    display: flex;
+    align-items: stretch;
+    margin: auto;
+    padding: auto;
+    width: fit-content;
+}
+
+body {
+    background-color: var(--body);
+    color: var(--title);
+}
+
+body h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 300%;
+    text-align: center;
 }

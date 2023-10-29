@@ -1,0 +1,24 @@
+:root {
+    --background: #1E2125;  /* Dark Grey for Body Background */
+    --button: #7B8A95;      /* Muted Blue-Grey for Button Background */
+    --title: #B0C4DE;      /* Light Steel Blue for Main Title (h1) */
+    --text: #DADFE2;       /* Light Grey for Text (p) */
+    --body: #2B2F36;       /* Slightly Lighter Grey for Wrapper & Option Div Background */
+    --link: #f0f5f8;
+}
+body {
+    background-color: var(--body);
+    color: var(--title);
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: var(--link);
+}
+
+div {
+    background-color: var(--background);
+    padding: 25px;
+    margin: 25px;
+    border-radius: 15px;
+}
